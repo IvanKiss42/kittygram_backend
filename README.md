@@ -1,51 +1,33 @@
-### Как запустить проект:
+## :exclamation:  Это часть проекта https://github.com/IvanKiss42/kittygram_final  
 
-Клонировать репозиторий и перейти в него в командной строке:
+:smile_cat: Kittygram - блог о домашних питомцах всех расцветок и нравов. Пользователи могут создавать страницы своих питомцев с текстовым описанием, изображением и списком достижений.  
 
-```
-git clone https://github.com/yandex-praktikum/kittygram_backend.git
-```
+:computer: Стек технологий: Python, Django, REST API, JWT  
 
-```
-cd kittygram_backend
-```
+В данном репозитории вынесена backend часть проекта для дальнейшего развертывания в docker контейнере.  
 
-Cоздать и активировать виртуальное окружение:
+Для отдельного запуска backend части выполните следующие шаги:
+Создайте и активируйте виртуальное окружение:
 
-```
-python3 -m venv env
+```bash
+python -m venv venv
+source venv/Scripts/activate
 ```
 
-* Если у вас Linux/macOS
+Установите зависимости из файла requirements.txt:
 
-    ```
-    source env/bin/activate
-    ```
-
-* Если у вас windows
-
-    ```
-    source env/scripts/activate
-    ```
-
-```
-python3 -m pip install --upgrade pip
-```
-
-Установить зависимости из файла requirements.txt:
-
-```
+```bash
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Выполнить миграции:
+Выполните миграции:
 
-```
-python3 manage.py migrate
+```bash
+python manage.py migrate
 ```
 
 Запустить проект:
-
-```
-python3 manage.py runserver
+```bash
+python manage.py runserver
 ```
